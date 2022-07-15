@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const number = Number(prompt('Tính tổng số chia hết cho 7 đầu tiên trong các số tự nhiên'))
+    let dem = 0;
+    let sum = 0;
+    for (let i = 0; i < 1000; i++) {
+        if (i % 7 === 0) {
+            sum += i
+            dem ++
+            if (dem === number) {
+                break
+            }
+        }
+    }
+    document.write(sum)
+
+</script>
+</body>
+</html>

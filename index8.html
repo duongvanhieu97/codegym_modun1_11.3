@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="result" onclick="result()">
+    <button>click</button>
+</div>
+
+<script>
+    function result() {
+        let number = Number(prompt('Số bạn muốn đoán'));
+        let numberRandom = Math.floor(Math.random() * number)
+        let numberCheck = Number(prompt('Nhập số bạn đoán'))
+        let i = 0;
+        while (numberCheck !== numberRandom) {
+            i++
+            if (i === 4) {
+                alert('Bạn đã hết số lần đoán')
+                break;
+            }else if (numberCheck < numberRandom) {
+                alert('Số bạn đoán bé hơn')
+            }else  {
+                alert('số bạn đoán lớn hơn')
+            }
+            numberCheck = Number(prompt('Nhập số bạn đoán'))
+        }
+        if (i === 4) {
+            document.write('Bạn hết số lần đoán')
+        } else  {
+            document.write('Bạn đã đoán đúng số')
+        }
+
+    }
+</script>
+</body>
+</html>
